@@ -1,0 +1,29 @@
+{
+  "_comment": "WOL App Configuration File - Customize these settings before starting the app",
+  
+  "app": {
+    "_comment": "Flask application settings",
+    "secret_key": "change-this-to-a-random-secret-key-for-production",
+    "debug": false,
+    "host": "0.0.0.0",
+    "port": 5050
+  },
+  
+  "monitoring": {
+    "_comment": "Device monitoring settings",
+    "interval_seconds": 30,
+    "ping_count": 1
+  },
+  
+  "paths": {
+    "_comment": "File paths and system commands",
+    "devices_file": "devices.json",
+    "ping_command": "/usr/bin/ping",
+    "wakeonlan_command": "/usr/bin/wakeonlan"
+  },
+  
+  "network": {
+    "_comment": "Network discovery settings",
+    "local_network": "192.168.8.0/24"
+  }
+}
