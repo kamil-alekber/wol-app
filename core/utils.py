@@ -2,7 +2,7 @@
 
 import hashlib
 import subprocess
-from config import config
+from .config import config
 
 
 def generate_device_id(name: str, mac: str) -> str:

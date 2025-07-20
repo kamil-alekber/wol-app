@@ -6,8 +6,8 @@ import threading
 import time
 import ipaddress
 from typing import List, Optional, Dict, Any
-from models import DiscoveredDevice
-from config import config
+from core.models import DiscoveredDevice
+from core.config import config
 
 
 class DiscoveryService:

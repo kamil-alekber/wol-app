@@ -2,9 +2,9 @@
 
 import subprocess
 from datetime import datetime
-from models import Device
+from core.models import Device
 from services.device_service import DeviceService
-from config import config
+from core.config import config
 
 
 class WakeOnLanService:

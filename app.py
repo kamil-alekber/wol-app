@@ -1,7 +1,7 @@
 """Main application factory for the Wake-on-LAN Flask application."""
 
 from flask import Flask
-from config import config
+from core.config import config
 from services import DeviceService, MonitoringService, DiscoveryService, WakeOnLanService
 from routes import (
     main_bp, devices_bp, status_bp, wol_bp, discovery_bp,

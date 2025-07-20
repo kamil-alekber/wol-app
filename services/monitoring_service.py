@@ -3,10 +3,10 @@
 import threading
 import time
 from typing import Dict
-from models import DeviceStatus
+from core.models import DeviceStatus
 from services.device_service import DeviceService
-from utils import ping_device
-from config import config
+from core.utils import ping_device
+from core.config import config
 
 
 class MonitoringService:

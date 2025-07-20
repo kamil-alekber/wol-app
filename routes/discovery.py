@@ -3,8 +3,8 @@
 from flask import Blueprint, jsonify, Response
 from datetime import datetime
 from typing import Union, Tuple, TYPE_CHECKING
-from models import Device
-from utils import generate_device_id
+from core.models import Device
+from core.utils import generate_device_id
 
 if TYPE_CHECKING:
     from services import DiscoveryService, DeviceService

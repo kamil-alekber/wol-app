@@ -3,8 +3,8 @@
 import json
 import os
 from typing import List, Dict, Any
-from models import Device
-from config import config
+from core.models import Device
+from core.config import config
 
 
 class DeviceService:
