@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/kamil-alekber/wol-app/blob/main/README.md
+    about: Please check our documentation first before opening an issue
+  - name: 💬 GitHub Discussions
+    url: https://github.com/kamil-alekber/wol-app/discussions
+    about: Ask questions and discuss ideas with the community
