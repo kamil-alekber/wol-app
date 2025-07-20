@@ -35,7 +35,32 @@ A simple web application for managing Wake-On-LAN devices with a clean, modern i
 
 ## Installation
 
-1. **Clone or download** this application to your desired directory
+### Quick Installation (Recommended)
+
+For a completely automated installation, run this one-liner:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/yourusername/wol-app/main/quick-install.sh | bash
+```
+
+Or with wget:
+```bash
+wget -qO- https://raw.githubusercontent.com/yourusername/wol-app/main/quick-install.sh | bash
+```
+
+This will:
+- Download the latest release
+- Install all dependencies
+- Set up the configuration
+- Create a startup script
+
+### Manual Installation
+
+1. **Download the latest release:**
+   ```bash
+   curl -L https://github.com/yourusername/wol-app/archive/refs/tags/v1.0.0.tar.gz | tar -xz
+   cd wol-app-1.0.0
+   ```
 
 2. **Install Python dependencies:**
    ```bash
