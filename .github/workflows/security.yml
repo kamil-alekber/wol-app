@@ -35,7 +35,7 @@ jobs:
           bandit -r . -f json -o bandit-results.json || true
 
       - name: Upload bandit results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: bandit-results
