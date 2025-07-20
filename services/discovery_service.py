@@ -47,7 +47,7 @@ class DiscoveryService:
     def _discover_device_by_ip(self, ip: str) -> Optional[DiscoveredDevice]:
         """Discover a single device by IP address using arping to find MAC address"""
         try:
-            arping_result = subprocess.run(['arping', '-c', '1', '-w', '1', ip], 
+            arping_result = subprocess.run([config.arping_command, '-c', '1', '-w', '1', ip], 
                                          capture_output=True, text=True, timeout=3)
             
             if arping_result.returncode == 0 and arping_result.stdout:
@@ -62,7 +62,7 @@ class DiscoveryService:
             return None
             
         except FileNotFoundError:
-            print(f"Error: 'arping' command not found. Please install arping utility.")
+            print(f"Error: 'arping' command not found at {config.arping_command}. Please install arping utility or update the arping_command path in config.json.")
             return None
         except (subprocess.TimeoutExpired, subprocess.CalledProcessError, Exception):
             return None

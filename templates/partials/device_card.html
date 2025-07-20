@@ -1,0 +1,33 @@
+<div class="device-card">
+    <div class="device-header">
+        <div class="device-name-container">
+            <div class="device-name">{{ device.name }}</div>
+            <span class="status-circle status-{{ device.status }}" data-device-id="{{ device.id }}"
+                title="Status: {{ device.status }}"></span>
+        </div>
+    </div>
+    <div class="device-info">
+        <p><strong>MAC:</strong> {{ device.mac }}</p>
+        {% if device.ip %}
+        <p><strong>IP:</strong> {{ device.ip }}</p>
+        {% endif %}
+        {% if device.description %}
+        <p><strong>Description:</strong> {{ device.description }}</p>
+        {% endif %}
+        {% if device.last_wake %}
+        <p class="last-wake">Last wake: {{ device.last_wake[:19].replace('T', ' ') }}</p>
+        {% endif %}
+    </div>
+    <div class="device-actions">
+        <form method="POST" action="/wake/{{ device.id }}">
+            <button type="submit" class="btn btn-success">⚡ Wake</button>
+        </form>
+        <button type="button" class="btn btn-warning"
+            onclick="openEditModal('{{ device.id }}', '{{ device.name }}', '{{ device.mac }}', '{{ device.ip }}', '{{ device.description }}')">✏️
+            Edit</button>
+        <form method="POST" action="/delete/{{ device.id }}"
+            onsubmit="return confirm('Are you sure you want to delete this device?')">
+            <button type="submit" class="btn btn-danger">🗑️ Delete</button>
+        </form>
+    </div>
+</div>

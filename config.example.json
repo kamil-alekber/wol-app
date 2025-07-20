@@ -19,6 +19,7 @@
     "_comment": "File paths and system commands",
     "devices_file": "devices.json",
     "ping_command": "/usr/bin/ping",
+    "arping_command": "/usr/local/sbin/arping",
     "wakeonlan_command": "/usr/bin/wakeonlan"
   },
   

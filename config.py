@@ -41,6 +41,7 @@ class Config:
             "paths": {
                 "devices_file": "devices.json",
                 "ping_command": "/usr/bin/ping",
+                "arping_command": "/usr/bin/arping",
                 "wakeonlan_command": "/usr/bin/wakeonlan"
             },
             "network": {
@@ -87,6 +88,10 @@ class Config:
     @property
     def ping_command(self) -> str:
         return self.get('paths', 'ping_command', '/usr/bin/ping')
+    
+    @property
+    def arping_command(self) -> str:
+        return self.get('paths', 'arping_command', '/usr/bin/arping')
     
     @property
     def wakeonlan_command(self) -> str:

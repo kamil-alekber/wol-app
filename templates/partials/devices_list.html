@@ -1,0 +1,13 @@
+<!-- Devices List -->
+{% if devices %}
+<div class="devices-grid">
+    {% for device in devices %}
+    {% include 'partials/device_card.html' %}
+    {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">
+    <h3>No devices added yet</h3>
+    <p>Add your first Wake-On-LAN device using the form above!</p>
+</div>
+{% endif %}
